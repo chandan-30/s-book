@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react'
 import Link from 'next/link';
 import styles from './navbar.module.css';
@@ -38,16 +40,22 @@ function Navbar() {
       ];
 
   return (
-    <div className={ styles.container }>
-        <Link href="/"> S-book </Link>
-        <div>
-            {
-                links && links.map( (link) => {
-                    return <Link key={ link.id } href={ link.url}> { link.title } </Link>
-                })
-            }
-        </div>
+    <div className={styles.container}>
+    <Link href="/" className={styles.logo}>
+      S-book
+    </Link>
+    <div className={styles.links}>
+      {/* <DarkModeToggle /> */}
+      {links.map((link) => (
+        <Link key={link.id} href={link.url} className={styles.link}>
+          {link.title}
+        </Link>
+      ))}
+      
+        <button className={styles.logout} onClick={() => alert('logged out!!') } > Logout </button>
+
     </div>
+  </div>
   )
 }
 
