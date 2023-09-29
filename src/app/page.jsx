@@ -8,11 +8,10 @@ export default function Home() {
     <div className={styles.container}>
       <div className={styles.item}>
         <h1 className={styles.title}>
-          Better design for your digital products.
+          Connecting the people.
         </h1>
         <p className={styles.desc}>
-          Turning your Idea into Reality. We bring together the teams from the
-          global tech industry.
+          Sharing your thoughts to the world. We bring together the people from all around the globe.
         </p>
         <Button url="/portfolio" text="See Our Works"/>
       </div>
